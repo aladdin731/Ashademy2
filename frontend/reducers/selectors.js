@@ -11,7 +11,6 @@ export const selectCourseOfType = (state, ctype) => {
   const typeCourses = [];
   for(let i = 0; i < courses.length; i++) {
     if(courses[i].couseType === ctype) {
-      console.log(courses[i])
       typeCourses.push(courses[i])
     }
   }
