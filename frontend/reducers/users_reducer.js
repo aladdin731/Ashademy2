@@ -18,7 +18,11 @@ const usersReducer = (state = {}, action) => {
       return nextState;
     case RECEIVE_COURSE:
       nextState = Object.assign({}, state);
-      nextState[action.course.mentorId].courseIds.push(action.course.id);
+      let courseIds = nextState[action.course.mentorId].courseIds;
+      if(!courseIds.includes(action.course.id)) {
+        courseIds.push(action.course.id)
+      }
+      // nextState[action.course.mentorId].courseIds.push(action.course.id);
       return nextState;
     case REMOVE_COURSE:
       nextState = Object.assign({}, state);
