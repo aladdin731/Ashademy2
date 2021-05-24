@@ -19,51 +19,51 @@ export const selectCourseOfType = (state, ctype) => {
 
 
 export const selectCoursesForCurrentUser = (state, currentUser) => {
-  if(!state.entities.users) return null;
+  if(!state.entities.users) return [];
   const user = state.entities.users[currentUser.id];
   if(user && user.courseIds && Object.keys(state.entities.courses).length !== 0 ) {
     return user.courseIds.map(courseId => {
       if(!state.entities.courses[courseId]){
-        return null;
+        return [];
       }else {
         return state.entities.courses[courseId]
       }
     })
   }else {
-    return null;
+    return [];
   }
 };
 
 export const selectRequestsForCurrentUser = (state, currentUser) => {
-  if(!state.entities.users) return null;
+  if(!state.entities.users) return [];
   const user = state.entities.users[currentUser.id];
   if(user && user.requestIds && Object.keys(state.entities.requests).length !== 0 ) {
     return user.requestIds.map(requestId => {
       if(!state.entities.requests[requestId]){
-        return null;
+        return [];
       }else {
         return state.entities.requests[requestId]
       }
     })
   }else {
-    return null;
+    return [];
   }
 };
 
 
 export const selectReceivedRequestsForCurrentUser = (state, currentUser) => {
-  if(!state.entities.users) return null;
+  if(!state.entities.users) return [];
   const user = state.entities.users[currentUser.id];
   if(user && user.receivedRequestsids && Object.keys(state.entities.requests).length !== 0 ) {
     return user.receivedRequestsids.map(requestId => {
       if(!state.entities.requests[requestId]){
-        return null;
+        return [];
       }else {
         return state.entities.requests[requestId]
       }
     })
   }else {
-    return null;
+    return [];
   }
 };
 
