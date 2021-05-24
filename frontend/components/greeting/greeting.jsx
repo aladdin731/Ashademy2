@@ -42,7 +42,7 @@ class Greeting extends React.Component {
             <div className="header">
                 <div className="logo-section">
                     <Link to="/" className="domain">
-                        <img className="icon logo-icon" src={window.logo} alt="ashademy"/>
+                        <img className="icon logo-icon" src={window.logo} alt="ashademy2"/>
                         <span className="website-name" onClick={this.goBack}> Ashademy </span>
                     </Link>
                 </div>
