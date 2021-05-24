@@ -1,25 +1,20 @@
+# Ashademy2
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Ashademy
+Ashademy is a website that connects software engineers from around the world. It offers an option to be mentor, be mentee or just connect with other software engineers around the world.  The homepage is a clone of airbnb.
+https://ashademy.herokuapp.com/#/
 
-Things you may want to cover:
+## Technology
+* Backend: Ruby on rails
+* Frontend: React, Redux
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# Ashademy2
+## Features
+1. Be mentor to add course
+2. Be mentee to request a course
+3. Leave a review or question for some course 
+4. Search for a specific type of course
+   
+# npm start & rails s to run the app
+# heroku run bundle exec rails db:migrate
+# heroku run bundle exec rails db:seed
