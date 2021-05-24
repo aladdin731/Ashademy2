@@ -37,11 +37,11 @@ class CourseDetail extends React.Component{
         course_id: this.props.courseId,
         mentee_id: this.props.currentUser.id
     })
+    this.props.createRequest(request);
     this.setState({
       start_time: "",
       end_time:"",
     })
-    this.props.createRequest(request);
   }
 
 

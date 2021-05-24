@@ -6,7 +6,6 @@ import {RECEIVE_REVIEW} from '../actions/review_actions';
 
 const usersReducer = (state = {}, action) => {
   Object.freeze(state);
-  // let nextState = Object.assign({}, state);
   let nextState;
   switch(action.type) {
     case RECEIVE_CURRENT_USER:
@@ -37,11 +36,13 @@ const usersReducer = (state = {}, action) => {
     case RECEIVE_REQUEST:
       nextState = Object.assign({}, state);
       let requestId = action.request.id;
-      let requestArr = nextState[action.request.menteeId].requestIds;
-      let receivedRequestArr = nextState[action.request.receiver.id].receivedRequestsids;
-      if(!requestArr.includes(requestId)) {
-        requestArr.push(requestIds)
-      }
+      // let sender = nextState[action.request.sender.id];
+      let receiver = nextState[action.request.receiver.id];
+      // let requestArr = sender.requestIds;
+      let receivedRequestArr = receiver.receivedRequestsids;
+      // if(!requestArr.includes(requestId)) {
+      //   requestArr.push(requestIds)
+      // }
       if(!receivedRequestArr.includes(requestId)) {
         receivedRequestArr.push(requestId)
       }
